@@ -57,8 +57,7 @@ class FieldFile(models.Model):
     #----------------------------------------------------------
     # Settings
     #----------------------------------------------------------
-    
-    @api.model_cr_context
+
     def _auto_init(self):
         res = super(FieldFile, self)._auto_init()
         tools.create_index(self._cr, 'muk_dms_file_reference_idx',
